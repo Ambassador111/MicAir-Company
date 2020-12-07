@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "ubuntu", serif;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+        
+    }
+}
+
+@keyframes show-word{
+    0%{
+        transform: translateY(30em) rotateY(-40deg);
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.header-image-wrap1{
+    animation-name: slide;
+    animation-duration: 5;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow:  hidden ;
+    perspective: 30em;
+}
+
+body{
+    background: linear-gradient(rgba(180, 178, 141, 0.5),rgba(180, 178, 141, 0));
+}
+.header-image-wrap{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    overflow: hidden;
+}
+
+
+
+.header-image{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: .7;
+    animation: scale 15s ;
+    width: fit-content;
+    
+}
+
+.container{ 
+    margin: 0 auto;
+    max-width: 1000px;  
+    padding: 1em .5em;  
+}
+
+.nav{
+    position: absolute;
+    text-align: center;
+    top: 1em;
+    /*left: 37%;*/  
+    justify-content: center;
+}
+.nav-wrap{
+    display: flex;
+    justify-content: center;
+}
+.nav ul{
+    display: flex;
+}
+.nav li{
+
+    font-size: 1.5em;
+    transition: .5s;
+ 
+}
+.nav a{
+    padding: 1.5em;
+    color: rgb(63, 61, 61);
+}
+.nav li:hover{
+    padding: .5em;
+    background-color: rgba(222, 184, 135, 0.5);
+    
+}
+.nav a:active{
+    color:  rgba(157, 161, 163, 0.63);
+}
+
+
+.container-sub{
+position: absolute;
+top: 20%;
+}
+
+.container-sub h1{
+    font-family: "monoton",serif;
+    font-weight: 300;
+    font-size: 4em;
+    word-spacing: .5em;
+    opacity: 0; 
+    animation: show-word .5s .3s forwards;   
+}
+
+.container-sub p{
+    font-size: 2em;
+    line-height: 2em;
+    color: rgb(85, 84, 84);
+    font-weight: lighter;
+    opacity: 0;
+    animation: show-word .6s .4s forwards; 
+    font-family: "sansita swashed" ,serif;  
+}
+
+.rec-bnt{
+padding: .7em;
+cursor: pointer;
+text-align: center;
+vertical-align: middle;
+border-radius: .5em;
+border: 2px solid rgba(20, 51, 190, 0.897);
+
+transition: all .5s linear;
+}
+
+
+.rec-bnt-wrap{
+    position: absolute;
+    top: 130%;
+    display: flex
+}
+
+.rec-bnt-header{   
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.288);
+    border: 2px solid rgba(24, 100, 185, 0.555);
+    border-radius: .5em;
+    font-weight: bold;
+    color: rgb(68, 59, 50, .7);
+    padding-left: 2em;
+    padding-right: 2em;
+    opacity: 0;
+    animation: show-word .7s .5s forwards;
+   
+}
+.rec-bnt-header:hover{
+    background-color: rgba(33, 137, 207, 0.63);
+}
+.rec-bnt-header:active{
+    background-color: rgba(218, 165, 32, 0.685);
+    transition: none;
+}
+
+
+.round-bnt-wrap{
+position: absolute;
+top: 350%;
+left: 25em;
+}
+
+.round-bnt{
+    padding: .5em;
+    border-radius: 50%;
+    width: 3em;
+    background-color: rgba(245, 222, 179, 0.048);
+    border: 2px solid  rgba(24, 100, 185, 0.555);
+    color:  rgba(207, 218, 231, 0.747);
+    font-size: 1.3em;
+}
+
+.round-bnt:hover{
+    background-color: rgba(33, 137, 207, 0.63);
+}
+
+/*CSS for new added part*/
+
+.contain-wrap{
+    text-align: start;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+.items{
+    display: flex;
+   
+    padding-bottom: 1em;  
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    margin: 1em;
+    padding-top: .5em;
+    align-items: baseline;
+}
+
+.items:last-child{
+    border-bottom: none;
+}
+
+.items div{
+    flex: 1;
+}
+
+.items .item-event{
+    flex: 1.2;
+}
+
+.items .item-bnt{
+    flex: .85;
+}
+
+.items .item-city{
+    flex: 1.2;
+}
+
+.item-date{
+    font-weight: bold;
+}
+
+.item-city{
+    color: rgba(65, 53, 53, 0.8);
+}
+
+.item-event{
+    color: rgba(65, 53, 53, 0.8);
+}
+
+.interested-bnt{
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: rgba(40, 93, 139, 0.8);
+    color: rgba(250, 255, 220, 0.664);
+    font-size: .7em;
+    text-transform: uppercase;
+    word-spacing: .5em;
+ 
+    }
+    .interested-bnt:hover{
+        background-color: rgba(46, 197, 202, 0.877); 
+    }
+
+    .interested-bnt:active{
+        color: rgba(40, 93, 139, 0.8);
+        transition: none;
+    }
+
+    .section-header{
+        text-align: center;
+        font-size: 2em;
+        padding-top: 8%;
+        padding-bottom: 2em;
+    }
+/*End of HomePage body*/
+
+.footer{
+   background-color: rgba(50, 191, 196, 0.74);
+}
+
+.footer-wrap{
+    display: flex; 
+    
+}
+.mic-foot{
+    font-family: "monoton",serif;
+    font-weight: lighter;
+    font-size: 2em;
+    margin-right: auto;
+}
+
+.footer-wrap h4{
+font-size: 2em;
+}
+
+.footer-wrap h4:hover{
+    cursor: pointer;
+}
+
+.footer-ul{
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.footer-ul li{
+  padding: .5em;
+}
+
+/*End of HomePage*/
+
+/*StorePage starts*/
+
+.automobiles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    line-height: 2em;
+}
+.item-wrap{
+    margin-bottom: 2em;
+    transition: all linear .4s .2s;
+}
+
+.item-wrap:hover{
+    transform: scale(1.1);
+}
+.price{
+    transition: all .6s ease .1s  ;
+    text-align: center;
+  /*  width: fit-content;
+    margin-left: 4em;*/
+    display: flex;
+    justify-content: space-between ;
+}
+.price:hover{
+   background-color: rgb(138, 233, 201);
+   /* transform: scale(1.1);*/
+    border-radius: .5em;
+}
+
+.price > span > button{
+    padding: .5em 2em .5em 2em ;
+    border-radius: .5em;
+    background-color: rgba(40, 111, 139, 0.8);
+    color: rgba(250, 255, 220, 0.664);
+    font-size: 1em;
+    border: 0em;
+    transition: transform .4s;
+}
+
+.price > span > button:hover{
+    transform: scale(1.1);
+}
+
+.price > span > button:active{
+    color: rgba(50, 191, 196, 0.74);
+}
+
+
+
